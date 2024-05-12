@@ -9,6 +9,7 @@ export const fetchPhotos = searchImage => {
     image_type: 'photo',
     orientation: 'horizontal',
     safesearch: 'true',
+    per_page: 21,
   });
   return fetch(`${BASE_URL}/?${params}`).then(response => {
     if (!response.ok) {
